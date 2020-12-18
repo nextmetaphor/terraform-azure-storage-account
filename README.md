@@ -1,5 +1,5 @@
 # terraform-azure-storage-account
-[Terraform](https://www.terraform.io) module to create a [storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview).
+[Terraform](https://www.terraform.io) module to create an [Azure storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview).
 
 ## Install
 This module requires that the following are installed locally:
