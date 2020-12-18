@@ -6,7 +6,7 @@ This module requires that the following are installed locally:
 * [Docker](https://www.docker.com/get-started)
 * [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
-It also requires that there is an existing [Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) into which to place the VNet components.
+It also requires that there is an existing [Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) into which to place the storage account.
 
 ## Usage
 
@@ -15,7 +15,7 @@ It also requires that there is an existing [Azure Resource Group](https://docs.m
 docker run -it -v $HOME/.azure:/root/.azure mcr.microsoft.com/azure-cli az login
 ```
 
-### Create the Remote State Storage
+### Create the Storage Account
 ```bash
 # initialise 
 terraform init
@@ -24,11 +24,11 @@ terraform init
 # NOTE: the existing Azure resource group will need to be provided at the command-line 
 terraform plan -out tfplan
 
-# apply the plan, creating the Azure VNet resources
+# apply the plan, creating the Azure storage account resource
 terraform apply "tfplan"
 ```
 
-### Destroy the Remote State Storage
+### Destroy the Storage Account
 ```bash
 terraform destroy
 ```
